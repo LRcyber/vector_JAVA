@@ -1,0 +1,39 @@
+package application;
+import java.util.Locale;
+import java.util.Scanner;
+
+
+
+public class Vector {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		System.out.print("Enter N value: ");
+		int n = sc.nextInt();
+		double[]vect = new double [n];
+		
+		for ( int i = 0; i < n; i++) {
+			vect[i] = sc.nextDouble();
+			System.out.printf("vec[%d] =  %.2f",i+1,vect[i]);
+			System.out.println();
+
+		
+		}
+		double sum = 0.0;
+		for ( int i = 0; i < n; i++) {
+			sum+=vect[i];
+
+			
+		}
+		double avg = sum/3.0;
+		
+		System.out.printf("AVERAGE HEIGH: %.2f", avg);
+		
+		
+		
+		sc.close();
+	}
+
+}
